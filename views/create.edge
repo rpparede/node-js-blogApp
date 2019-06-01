@@ -21,15 +21,7 @@
 
           <form action="/posts/store" method="POST" encType="multipart/form-data">
 
-          <div class="control-group">
 
-
-              <div class="form-group floating-label-form-group controls">
-                        <label> Username</label>
-                        <input type="text" name="username" placeholder="Username" class="form-control">
-
-              </div>
-          </div>
 
 
 
@@ -65,7 +57,7 @@
 
                           <div class="form-group floating-label-form-group controls">
                                     <label> Content</label>
-                                    <textarea name="content" placeholder="Content..." cols="30" rows="10" class="form-control"></textarea>
+                                    <textarea id="content" name="content" placeholder="Content..." cols="30" rows="10" class="form-control"></textarea>
 
                           </div>
 
@@ -84,4 +76,18 @@
     </div>
   </div>
 </div>
+@endsection
+
+@section('styles')
+<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
+
+
+@endsection
+
+
+@section('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
+<script>
+      $('#content').summernote();
+    </script>
 @endsection
