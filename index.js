@@ -27,7 +27,9 @@ app.use(expressSession({
   secret: process.env.EXXPRESS_SESSION_KEY,
   store: new mongoStore({
     mongooseConnection: mongoose.connection
-  })
+  }),
+  resave: true,
+  saveUninitialized: true
 }))
 
 cloudinary.config({
