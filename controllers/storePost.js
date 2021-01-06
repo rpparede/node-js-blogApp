@@ -10,6 +10,7 @@ module.exports = (req, res) => {
 
       if (error) {
         console.log("**ERROR  POSTING TO CLOUDINARY**")
+        console.log(error)
         return res.redirect('/')
       }
 
