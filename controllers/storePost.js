@@ -9,6 +9,7 @@ module.exports = (req, res) => {
     cloudinary.v2.uploader.upload(uploadPath, (error, result) => {
 
       if (error) {
+        console.log("**ERROR  POSTING TO CLOUDINARY**")
         return res.redirect('/')
       }
 
@@ -18,6 +19,7 @@ module.exports = (req, res) => {
         //image: `/posts/${image.name}`,
         author: req.session.userId
       }, (error, post) => {
+        console.log("**ERROR STORING POST**")
         console.log(post)
         res.redirect("/");
       });

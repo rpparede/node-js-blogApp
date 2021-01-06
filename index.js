@@ -1,4 +1,6 @@
+// Used to configure app url and secrets
 require('dotenv').config();
+
 const expressEdge = require("express-edge")
 const edge = require('edge.js')
 const express = require("express")
