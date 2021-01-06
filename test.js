@@ -1,8 +1,8 @@
-const mongoose = require ('mongoose')
+const mongoose = require('mongoose')
 
 const Post = require('./database/models/Post')
 
-mongoose.connect('mongodb://localhost/node-js-test-blog',{ useNewUrlParser: true })
+mongoose.connect('mongodb://localhost/node-js-test-blog', { useNewUrlParser: true })
 
 // Post.find({}, (error,posts) => {
 //   console.log(error, posts)
@@ -26,6 +26,6 @@ mongoose.set('useFindAndModify', false);
 Post.findByIdAndUpdate("5cdce33441ccc5008ced233d", {
 
   title: 'My first edit on mongodbbb'
-}, (error,post)=>{
-  console.log(error,post)
+}, (error, post) => {
+  console.log(error, post)
 })

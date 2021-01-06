@@ -1,6 +1,6 @@
-module.exports = (req,res) => {
+module.exports = (req, res) => {
 
-  res.render('register',{
+  res.render('register', {
     errors: req.flash('registrationErrors'),
     data: req.flash('data')[0]
   })
